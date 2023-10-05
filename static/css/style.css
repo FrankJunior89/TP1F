@@ -1,0 +1,55 @@
+/* Styles pour la mise en page */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Styles pour l'en-tête (header) */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+/* Styles pour les boutons */
+.content {
+    display: flex;
+    align-items: flex-start;
+    margin-left: 20px;
+    padding: 20px; /* Espace intérieur de la section de contenu */
+}
+
+.button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Styles pour la TextBox */
+.textbox {
+    width: 100%; /* La TextBox occupe 60% de la largeur de la section de contenu */
+    padding: 10px;
+    resize: none; /* Empêche le redimensionnement de la TextBox par l'utilisateur */
+}
+
+/* Styles for the paragraphs */
+.paragraphs {
+    margin-top: 20px; /* Add spacing between the buttons/textbox and paragraphs */
+}
+
+.paragraphs p {
+    margin-bottom: 10px; /* Add spacing between the paragraphs */
+}
+

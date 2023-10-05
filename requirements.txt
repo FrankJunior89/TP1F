@@ -1,2 +1,6 @@
 Flask
 gunicorn
+requests
+google-analytics-data
+pandas
+numpy

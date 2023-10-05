@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Traces</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='images/Image1.png') }}" alt="logo_EPF">
+        <p>Welcome</p>
+        <img src="{{ url_for('static', filename='images/Image2.png') }}" alt="logo_NFJ">
+    </header>
+    
+    <div class="content">
+        <div class="buttons">
+            <div class="button">
+                <img src="{{ url_for('static', filename='images/Image3.png') }}" alt="logo_Google">
+                <form action="/make_google_request" method="POST">
+                    <button type="submit">Request Google</button>
+                </form>
+            </div>
+            <div class="button">
+                <img src="{{ url_for('static', filename='images/Image4.png') }}" alt="logo_GA">
+                <form action="/analytics_request" method="POST">
+                    <button type="submit">Request Google Analytics</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="textbox">
+            <textarea rows="15" cols="120">{{output_cookies}}</textarea>
+            <textarea rows="25" cols="120">{{output_text}}</textarea>
+        </div>
+
+        <div class="paragraphs">
+            <p>Number of visitors fethed from Google Analytics : {{nb_users}} </p>
+            <form action="/logger" method="POST">
+                <button type="submit">Voir les logs</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

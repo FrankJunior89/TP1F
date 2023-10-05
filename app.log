@@ -1,0 +1,39 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [20/Sep/2023 20:27:06] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Sep/2023 20:27:09] "GET / HTTP/1.1" 200 -
+DEBUG:root:This is a log message from the server.
+INFO:werkzeug:127.0.0.1 - - [20/Sep/2023 20:27:15] "GET /logger HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 572-087-805
+DEBUG:root:This is a log message from the server.
+INFO:werkzeug:127.0.0.1 - - [01/Oct/2023 10:28:17] "GET /logger HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 572-087-805
+DEBUG:root:This is a log message from the server.
+INFO:werkzeug:127.0.0.1 - - [01/Oct/2023 10:29:23] "GET /logger HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Frank Junior NGNIGUE\\Desktop\\TP1\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 572-087-805
+INFO:werkzeug:127.0.0.1 - - [01/Oct/2023 10:43:36] "GET / HTTP/1.1" 200 -
+WARNING:root:Watch out!
+INFO:werkzeug:127.0.0.1 - - [01/Oct/2023 10:43:44] "GET /logger HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Frank Junior NGNIGUE\\Desktop\\TP1\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
