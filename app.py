@@ -24,7 +24,8 @@ app.static_url_path = '/static'
 app.static_folder = 'static'
 
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = 'Test-4ad6fecd71e5.json'
-property_id = '407503759'
+#property_id = '407503759'
+property_id = '410311446'
 
 client = BetaAnalyticsDataClient()
 
@@ -71,12 +72,12 @@ def hello_world(nb_users=nb_users):
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-55763RC5D7');
+    gtag('config', 'G-LGFTF0XVHD');
     </script>
     """
 
 
-    return render_template('home.html',nb_users=nb_users)
+    return prefix_google + render_template('home.html',nb_users=nb_users)
 
 @app.route("/make_google_request", methods=["POST"])
 def make_google_request():
@@ -107,7 +108,7 @@ def make_analytics_request():
     except Exception as e:
         return "An error occurred: " + str(e)
 
-@app.route('/logger', methods=["POST"])
+@app.route('/logger', methods=["GET","POST"])
 def logger_page():
     # Log a message on the server-side
     with open('app.log', 'r') as log_file:
