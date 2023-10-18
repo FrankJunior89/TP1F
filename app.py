@@ -6,12 +6,15 @@ from google.analytics.data_v1beta.types import (
     Metric,
     OrderBy,
 )
-from google.analytics.data_v1beta.types import RunReportRequest as Run 
+from google.analytics.data_v1beta.types import RunReportRequest as Run
+from pytrends.request import TrendReq
 import logging
 import requests
 import os
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
+
 
 
 
@@ -61,6 +64,14 @@ req = Run(
     )
 
 nb_users = format_report(req)['activeUsers'].sum()
+
+pytrends = TrendReq(hl='fr-FR', tz=120)
+timeframe = 'today 1-m'
+pytrends.build_payload(kw_list=['Ronaldo','Messi'], timeframe=timeframe)
+interest_over_time_df = pytrends.interest_over_time()
+interest_over_time_df = interest_over_time_df.drop('isPartial', axis=1)
+
+
 
 @app.route('/', methods=['GET', 'POST'])
 def hello_world(nb_users=nb_users):
@@ -118,6 +129,24 @@ def logger_page():
     log_script = """<script>console.log("Je suis NFJ")</script>"""
     
     return render_template('home.html', output_text=log_message)
+
+@app.route('/trends', methods=["GET","POST"])
+def trend_page():
+    ax = interest_over_time_df.plot(title="Trends comparison")
+    # Get the Matplotlib figure associated with the DataFrame plot
+    fig = ax.get_figure()
+
+
+    # Save the plot to the specified file path
+    fig.savefig("static/images/plot.png", format='png')
+
+    # Close the plot to free up memory
+    plt.close(fig)
+
+
+
+    
+    return render_template('plot.html')
 
 if __name__ == "__main__":
     app.run()
